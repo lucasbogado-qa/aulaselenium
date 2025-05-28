@@ -1,24 +1,23 @@
 package exselenium;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.fail;
 
-import org.junit.After;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class TestaGoogle {
-	
+
 	protected WebDriver driver;
 	
-	@BeforeClass
-	public static void configuraDriver() {
-		System.setProperty("webdriver.chrome.driver", "D:\\Libs\\chromedriver\\84\\chromedriver.exe");
-	}
-	
-    @Before
+    @BeforeEach
     public void createDriver() {  
     
 		driver = new ChromeDriver();
@@ -30,8 +29,8 @@ public class TestaGoogle {
 		fail("Not yet implemented");
 	}
 	
-    @After
-    public void quitDriver() {
-       driver.quit();
+    @AfterAll
+    public static void quitDriver() {
+      // driver.quit();
     }
 }
