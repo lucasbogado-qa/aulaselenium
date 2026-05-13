@@ -26,7 +26,7 @@ public class TestaGoogle {
 
 	@Test
 	public void test() {
-		fail("Not yet implemented");
+		driver.get("www.youtube.com.br");
 	}
 	
     @AfterAll
